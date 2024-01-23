@@ -1,2 +1,4 @@
 # Team-1---Filmvisarna
-Grupparbete
+Grupparbete 
+Medlemmar:
+Alexandra, Kira, Charlotte, Kim, Samuel, Annelie
