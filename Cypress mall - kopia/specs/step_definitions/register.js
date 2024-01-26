@@ -56,11 +56,11 @@ When('I fill the phonenumber feald whit {string}', (a) => {});*/
 When('I fill the email feald whit {string}', (a) => {});*/
 
 When('I fill the password feald whit ABC12345', () => {
-  // TODO: implement step
+  cy.get(".register-form input:nth-child(5)").type("ABC12345");
 });
 
 When('I fill the confirm password feald whit ABC12345', () => {
-  // TODO: implement step
+  cy.get(".register-form input:nth-child(6)").type("ABC12345");
 });
 
 /* No duplicate steps, this one already above
@@ -72,6 +72,10 @@ Then('I should get a error message', () => {
 
 /* No duplicate steps, this one already above
 Given('that I am on the register new user page', () => {});*/
+
+When("I don't fill the firstname feald", () => {
+  cy.get(".register-form input:first-child");
+});
 
 /* No duplicate steps, this one already above
 When('I fill the lastname feald whit {string}', (a) => {});*/
