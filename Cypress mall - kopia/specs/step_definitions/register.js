@@ -5,31 +5,31 @@ Given('that I am on the register new user page', () => {
 });
 
 When('I fill the firstname feald whit {string}', (firstname) => {
-  cy.get(".register-form input").type(firstname);
+  cy.get(".register-form input:first-child").type(firstname);
 });
 
 When('I fill the lastname feald whit {string}', (lastname) => {
-  cy.get(".register-form input").type(lastname);
+  cy.get(".register-form input:nth-child(2)").type(lastname);
 });
 
-When('I fill the phonenumber feald whit {string}', (a) => {
-  // TODO: implement step
+When('I fill the phonenumber feald whit {string}', (phonenumber) => {
+  cy.get(".register-form input:nth-child(3)").type(phonenumber);
 });
 
-When('I fill the email feald whit {string}', (a) => {
-  // TODO: implement step
+When('I fill the email feald whit {string}', (email) => {
+  cy.get(".register-form input:nth-child(4)").type(email);
 });
 
-When('I fill the password feald whit {string}', (a) => {
-  // TODO: implement step
+When('I fill the password feald whit {string}', (password) => {
+  cy.get(".register-form input:nth-child(5)").type(password);
 });
 
-When('I fill the confirm password feald whit {string}', (a) => {
-  // TODO: implement step
+When('I fill the confirm password feald whit {string}', (password) => {
+  cy.get(".register-form input:nth-child(6)").type(password);
 });
 
 When('I click on the confirm-button', () => {
-  // TODO: implement step
+  cy.get(".confirm-button");
 });
 
 Then('I should be able to click on the ”Min sida”', () => {
