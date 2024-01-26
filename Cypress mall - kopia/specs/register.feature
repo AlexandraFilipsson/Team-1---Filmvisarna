@@ -26,7 +26,8 @@ Feature: register new user
 
   Scenario: Register new user whitout username
     Given that I am on the register new user page
-    When I fill the lastname feald whit "lastname"
+    When I don't fill the firstname feald
+    And I fill the lastname feald whit "lastname"
     And I fill the phonenumber feald whit "phonenumber"
     And I fill the email feald whit "email"
     And I fill the password feald whit "password"
