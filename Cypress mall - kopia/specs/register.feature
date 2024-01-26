@@ -19,8 +19,8 @@ Feature: register new user
     And I fill the lastname feald whit "lastname"
     And I fill the phonenumber feald whit "phonenumber"
     And I fill the email feald whit "email"
-    And I fill the password feald whit "ABC12345"
-    And I fill the confirm password feald whit "ABC12345"
+    And I fill the password feald whit ABC12345
+    And I fill the confirm password feald whit ABC12345
     And I click on the confirm-button
     Then I should get a error message
 
