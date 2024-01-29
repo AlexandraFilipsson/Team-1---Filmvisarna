@@ -29,15 +29,15 @@ When('I fill the confirm password feald whit {string}', (password) => {
 });
 
 When('I click on the confirm-button', () => {
-  cy.get(".confirm-button");
+  cy.get(".confirm-button").click();
 });
 
 Then('I should be able to click on the ”Min sida”', () => {
-  // TODO: implement step
+  cy.get(".myaccount-btn").click();
 });
 
 Then('be taken to ”Min sida” page', () => {
-  // TODO: implement step
+  cy.visit("https://filmvisarna-team1.nodehill.se/mitt-konto");
 });
 
 /* No duplicate steps, this one already above
@@ -96,5 +96,5 @@ When('I fill the confirm password feald whit {string}', (a) => {});*/
 When('I click on the confirm-button', () => {});*/
 
 Then('I should get a pop-up saying that I need to fill in firstname', () => {
-  // TODO: implement step
+  cy.get(".register-form input:first-child").should("be.empty");
 });
