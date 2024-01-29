@@ -7,6 +7,14 @@ Feature: Detailed View
         When I click on a movie
         Then movie details page is presented
 
+
+    Scenario: Click the button Boka
+        Given that I am on the start page
+        And I click on a movie
+        And movie details page is presented
+        When I click on "Boka" button
+        Then I should be taken to page ”Bokning”
+
     Scenario: See movie trailer
         Given that I am on the start page
         And I click on a movie

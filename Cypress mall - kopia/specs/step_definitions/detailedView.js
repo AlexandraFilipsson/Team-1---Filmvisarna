@@ -17,6 +17,27 @@ Then('movie details page is presented', () => {
 /* No duplicate steps, this one already above
 Given('that I am on the start page', () => {});*/
 
+/*Given('I click on a movie', () => {
+  // TODO: implement step
+});*/
+
+/*Given('movie details page is presented', () => {
+  // TODO: implement step
+});*/
+
+When('I click on {string} button', (a) => {
+  // Grab the Boka-button and click it
+  cy.get(".screening-book-btn").click();
+});
+
+Then('I should be taken to page ”Bokning”', () => {
+  cy.visit("https://filmvisarna-team1.nodehill.se/bokning/119");
+  
+});
+
+/* No duplicate steps, this one already above
+Given('that I am on the start page', () => {});*/
+
 /* No duplicate steps, this one already above
 Given('I click on a movie', () => {});*/
 
