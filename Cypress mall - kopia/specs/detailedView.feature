@@ -9,8 +9,9 @@ Feature: Detailed View
 
     Scenario: See movie trailer
         Given that I am on the start page
-        When I click on a movie trailer
-        Then movie trailer is presented
+        And I click on a movie
+        And movie details page is presented
+        Then movie trailer should be visible
 
     Scenario: Not able to see any booking info for upcoming movies on movie details page
         Given that I am on the start page

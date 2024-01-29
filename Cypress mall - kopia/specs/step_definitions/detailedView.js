@@ -6,6 +6,7 @@ Given('that I am on the start page', () => {
 });
 
 When('I click on a movie', () => {
+  cy.get('.carousel-card').last().click();
   // TODO: implement step
 });
 
@@ -16,24 +17,26 @@ Then('movie details page is presented', () => {
 /* No duplicate steps, this one already above
 Given('that I am on the start page', () => {});*/
 
-When('I click on a movie trailer', () => {
-  // TODO: implement step
-});
+/* No duplicate steps, this one already above
+Given('I click on a movie', () => {});*/
 
-Then('movie trailer is presented', () => {
-  // TODO: implement step
+/* No duplicate steps, this one already above
+Given('movie details page is presented', () => {
+}); */
+
+Then('movie trailer should be visible', () => {
+  cy.get('.ytp-cued-thumbnail-overlay')
+    .should('be.visible');
 });
 
 /* No duplicate steps, this one already above
 Given('that I am on the start page', () => {});*/
 
-Given('I click on a movie', () => {
-  // TODO: implement step
-});
+/* No duplicate steps, this one already above
+Given('I click on a movie', () => {});*/
 
-Given('movie details page is presented', () => {
-  // TODO: implement step
-});
+/* No duplicate steps, this one already above
+Given('movie details page is presented', () => {});*/
 
 When('I choose a future date in the calender', () => {
   // TODO: implement step
