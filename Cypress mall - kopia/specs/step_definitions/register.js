@@ -67,7 +67,7 @@ When('I fill the confirm password feald whit ABC12345', () => {
 When('I click on the confirm-button', () => {});*/
 
 Then('I should get a error message', () => {
-  // TODO: implement step
+  cy.get(".error-message").should("be.visible");
 });
 
 /* No duplicate steps, this one already above
