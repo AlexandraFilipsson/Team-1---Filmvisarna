@@ -46,7 +46,7 @@ Given('movie details page is presented', () => {
 }); */
 
 Then('movie trailer should be visible', () => {
-  cy.get('.ytp-cued-thumbnail-overlay')
+  cy.get('.trailer-iframe')
     .should('be.visible');
 });
 
