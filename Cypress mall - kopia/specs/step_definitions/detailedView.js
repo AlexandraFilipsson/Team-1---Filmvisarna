@@ -60,9 +60,9 @@ Given('I click on a movie', () => {});*/
 Given('movie details page is presented', () => {});*/
 
 When('I choose a future date in the calender', () => {
-  // TODO: implement step
+  cy.get('.date-input').type('2024-03-30')
 });
 
 Then("I can see the text 'Tyvärr finns det ingen visning för det valda datumet.'", () => {
-  // TODO: implement step
+  cy.get('.no-screening-para')
 });

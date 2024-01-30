@@ -7,7 +7,6 @@ Feature: Detailed View
         When I click on a movie
         Then movie details page is presented
 
-
     Scenario: Click the button Boka
         Given that I am on the start page
         And I click on a movie
