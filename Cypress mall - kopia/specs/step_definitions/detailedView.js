@@ -17,6 +17,35 @@ Then('movie details page is presented', () => {
 /* No duplicate steps, this one already above
 Given('that I am on the start page', () => {});*/
 
+/* No duplicate steps, this one already above
+Given('I click on a movie', () => {});*/
+
+/* No duplicate steps, this one already above
+Given('movie details page is presented', () => {
+}); */
+
+Then('movie trailer should be visible', () => {
+  cy.get('.trailer-iframe')
+    .should('be.visible');
+});
+
+/* No duplicate steps, this one already above
+Given('that I am on the start page', () => {});*/
+
+/* No duplicate steps, this one already above
+Given('I click on a movie', () => {});*/
+
+/* No duplicate steps, this one already above
+Given('movie details page is presented', () => {});*/
+
+Then('moviedetail-director field should be found', () => {
+  cy.get('.moviedetail-director') 
+    .should('be.visible');
+});
+
+/* No duplicate steps, this one already above
+Given('that I am on the start page', () => {});*/
+
 /*Given('I click on a movie', () => {
   // TODO: implement step
 });*/
@@ -32,22 +61,7 @@ When('I click on {string} button', (a) => {
 
 Then('I should be taken to page ”Bokning”', () => {
   cy.visit("https://filmvisarna-team1.nodehill.se/bokning/119");
-  
-});
 
-/* No duplicate steps, this one already above
-Given('that I am on the start page', () => {});*/
-
-/* No duplicate steps, this one already above
-Given('I click on a movie', () => {});*/
-
-/* No duplicate steps, this one already above
-Given('movie details page is presented', () => {
-}); */
-
-Then('movie trailer should be visible', () => {
-  cy.get('.trailer-iframe')
-    .should('be.visible');
 });
 
 /* No duplicate steps, this one already above
