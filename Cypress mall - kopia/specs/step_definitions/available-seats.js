@@ -9,10 +9,12 @@ Given('I have clicked on a movie', () => {
     .first()
     .click()
 });
-//_________1_______________________________________________________
+
+//__________1__________
 Given('I have chosen the date 2024-02-22', () => {
   cy.get('.date-input').type('2024-02-22')
 });
+
 Given('I have pressed Boka', () => { 
    cy.get('.screening-book-btn')
     .first()
@@ -33,7 +35,8 @@ Then('I should not be able to continue', () => {
     .find('button')
     .should('be.disabled')
 });
-//___________2___________________________________________________
+
+//__________2__________
 Given('I have chosen the date 2024-02-17', () => {
   cy.get('.date-input').type('2024-02-17')
 });
@@ -52,7 +55,7 @@ When('there are only 5 seats available', () => {
   cy.get('.seat:not(.taken-seat)').should('have.length', 5)
 });
 
-//__________3_________________________________________
+//__________3__________
 
 Given('I have pressed the button to choose a date and time', () => {
   cy.get('.screening-book-btn')
@@ -80,7 +83,8 @@ Then('I should not be able to press Boka biljett', () => {
     .find('button')
     .should('be.disabled')
 });
-//_________4______________________________________________________
+
+//__________4__________
 
 When('I enter 1 ordinary ticket for the movie', () => {
   cy.get('.ticket-list-item .button-container')
@@ -96,7 +100,8 @@ Then('I should not be able to press seats that are taken.', () => {
     .trigger('mouseover')
     .should('have.class', 'seat-hover-fail')
 });
-//_________5_____________________________________
+
+//__________5__________
 
 Given('I have chosen the date 2024-02-18', () => {
   cy.get('.date-input').type('2024-02-18')
