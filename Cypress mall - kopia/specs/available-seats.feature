@@ -7,26 +7,40 @@ Feature: Available Seats
     As a user I want to see Live or directly at the screen when seats ar booked so I don't think they are still available.
 
     Background:
-      Given I have clicked on a movie
-      And I have pressed the button to choose a date and time  
-      And "bookingpage-container" is visable
+      Given I am on the startpage
+      And I have clicked on a movie
        
-    Scenario: If all seats are taken
-      When all seats are taken
+      Given I have chosen the date 2024-02-22
+      And I have pressed Boka
+      And theatre-container is visible
+      And all seats are taken
       Then I should not be able to continue 
-      And an alert should tell me so
-          
-    Scenario: If there is not enough seats for the group I want to book tickets for.
-      When I entered the number of tickets I want to book 
-      And there are not enough seats available
-      Then I should not be able to press on any seats
-      
-    Scenario: I want to book more then 8 tickets
-      When I want to buy 10 child tickets 
-      Then a message should tell me that i can't book more then 8 tickets at a time
-      And I should not be able to press on any seats
 
-    Scenario: I want to book a specific seat thats taken
-      When I enter 1 ordenary ticket for the move 
+    Scenario: If there is not enough seats for the group I want to book tickets for.
+      Given I have chosen the date 2024-02-17
+      And I have pressed Boka
+      And theatre-container is visible
+      When I add 6 tickets
+      And there are only 5 seats available
       Then I should not be able to press seats that are taken.
       
+    Scenario: I want to book more then 8 ticket
+      Given I have pressed the button to choose a date and time
+      And theatre-container is visible
+      When I want to buy 10 tickets
+      Then a message should tell me that i can not book more then 8 tickets at a time
+      And I should not be able to press Boka biljett
+
+    Scenario: I want to book a specific seat thats taken
+      Given I have pressed the button to choose a date and time
+      And theatre-container is visible
+      When I enter 1 ordinary ticket for the movie 
+      Then I should not be able to press seats that are taken.
+      
+    Scenario: I want to book seats that are not adjacent
+      Given I have chosen the date 2024-02-18 
+      And I have pressed Boka
+      And theatre-container is visible
+      When I press individuella platser
+      Then I can press the first and the last seats 
+      And press Boka biljett
