@@ -56,7 +56,7 @@ Given('that I am on the start page', () => {});*/
 
 When('I click on {string} button', (a) => {
   // Grab the Boka-button and click it
-  cy.get(".screening-book-btn").click();
+  cy.get('.screening-book-btn').click();
 });
 
 Then('I should be taken to page ”Bokning”', () => {
