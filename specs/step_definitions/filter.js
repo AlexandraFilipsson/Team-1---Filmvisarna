@@ -1,14 +1,14 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('that I am on the startpage', () => {
-  // TODO: implement step
+  cy.visit('/')
 });
 
-Given('I have clicked on "Filmer"', () => {
-  // TODO: implement step
+Given('I have clicked on Filmer', () => {
+
 });
 
-Given('I click on "På bio nu"', () => {
+Given('I click on På bio nu', () => {
   // TODO: implement step
 });
 

@@ -3,10 +3,10 @@ Feature: Filter
 
   Background:
     Given that I am on the startpage
-    And I have clicked on "Filmer"
+    And I have clicked on Filmer
 
   Scenario: Filter movies if they are in the cinema right now
-    Given I click on 'På bio nu'
+    Given I click on På bio nu
     When I apply the filter
     Then I should be able to see all movies that are currently in cinemas
 
@@ -20,5 +20,3 @@ Feature: Filter
     When I apply the age limit filter
     Then I should be able to see all movies that meet the selected age limit
 
-
-test test test
