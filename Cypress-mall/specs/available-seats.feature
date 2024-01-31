@@ -10,6 +10,7 @@ Feature: Available Seats
       Given I am on the startpage
       And I have clicked on a movie
        
+    Scenario: all seats are taken
       Given I have chosen the date 2024-02-22
       And I have pressed Boka
       And theatre-container is visible
