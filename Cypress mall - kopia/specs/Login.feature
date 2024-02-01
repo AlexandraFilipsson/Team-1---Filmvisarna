@@ -4,29 +4,29 @@ Feature: log in to the website
 
   Scenario: Login whit the wrong email
     Given that I am on the log in page
-    When I fill the email feald whit "wrong@error.example"
-    And I fill the password feald whit "Ananas123456789"
+    When I fill the email feald whit wrong@error.example
+    And I fill the password feald whit Ananas123456789
     And I click on the confirm-button
     Then I should get an error massage
 
   Scenario: Login whit the wrong password
     Given that I am on the log in page
-    When I fill the email feald whit "Sakuya.yae@Darkness.ananas"
-    And I fill the password feald whit "errorERR0RerrorERR0R"
+    When I fill the email feald whit Sakuya.yae@Darkness.ananas
+    And I fill the password feald whit errorERR0RerrorERR0R
     And I click on the confirm-button
     Then I should get an error massage
 
   Scenario: Login whit a empty password feald
     Given that I am on the log in page
-    When I fill the email feald whit "Sakuya.yae@Darkness.ananas"
+    When I fill the email feald whit Sakuya.yae@Darkness.ananas
     And I fill the password feald whit nothing in it
     And I click on the confirm-button
     Then I should get an error massage
 
   Scenario: Login whit a empty password feald
     Given that I am on the log in page
-    When I fill the email feald whit "Sakuya.yae@Darkness.ananas"
-    And I fill the password feald whit "Ananas123456789"
+    When I fill the email feald whit Sakuya.yae@Darkness.ananas
+    And I fill the password feald whit Ananas123456789
     And I click on the confirm-button
     Then I should be loged in
     And be taken to the register page
