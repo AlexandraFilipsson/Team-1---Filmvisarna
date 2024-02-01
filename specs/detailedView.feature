@@ -33,3 +33,10 @@ Feature: Detailed View
         When I choose a future date in the calender
         Then I can see the text 'Tyvärr finns det ingen visning för det valda datumet.'
 
+    Scenario: Fetch more viewings on movie details page
+        Given that I am on the start page
+        When I click on the first movie
+        And movie details page is presented
+        And I press the "Hämta fler visningar" button
+        Then more viewings to book should be presented on the page
+

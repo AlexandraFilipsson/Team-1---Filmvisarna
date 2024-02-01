@@ -1,17 +1,14 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('that I am on the start page', () => {
-  // Goto the start page
   cy.visit('/');
 });
 
 When('I click on a movie', () => {
   cy.get('.carousel-card').last().click();
-  // TODO: implement step
 });
 
 Then('movie details page is presented', () => {
-  // TODO: implement step
 });
 
 /* No duplicate steps, this one already above
@@ -46,17 +43,14 @@ Then('moviedetail-director field should be found', () => {
 /* No duplicate steps, this one already above
 Given('that I am on the start page', () => {});*/
 
-/*Given('I click on a movie', () => {
-  // TODO: implement step
-});*/
+/* No duplicate steps, this one already above
+Given('I click on a movie', () => {});*/
 
-/*Given('movie details page is presented', () => {
-  // TODO: implement step
-});*/
+/* No duplicate steps, this one already above
+Given('movie details page is presented', () => {});*/
 
 When('I click on {string} button', (a) => {
-  // Grab the Boka-button and click it
-  cy.get('.screening-book-btn').click();
+  cy.get(".screening-book-btn").click();
 });
 
 Then('I should be taken to page ”Bokning”', () => {
@@ -79,4 +73,22 @@ When('I choose a future date in the calender', () => {
 
 Then("I can see the text 'Tyvärr finns det ingen visning för det valda datumet.'", () => {
   cy.get('.no-screening-para')
+});
+
+/* No duplicate steps, this one already above
+Given('that I am on the start page', () => {});*/
+
+When('I click on the first movie', () => { 
+cy.get('.carousel-card').first().click();
+});
+
+/* No duplicate steps, this one already above
+When('movie details page is presented', () => {
+});*/
+
+When('I press the {string} button', (a) => {
+  cy.get(".more-screenings-btn").click();
+});
+
+Then('more viewings to book should be presented on the page', () => {
 });
