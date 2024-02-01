@@ -6,25 +6,25 @@ Given('that I am on the startpage', () => {
 
 Given('I have clicked on Filmer', () => {
   it('Clicks on the "Filmer" link', () => {
-    // Visit the page containing the element
-    // Use XPath to locate the "Filmer" link and click it
     cy.get('body div header nav ul li:eq(0) a').click();
 
   });
 });
 
 When('I click on På bio nu', () => {
-  it('Clicks on the "Filmer" link', () => {
-    // Visit the page containing the element
-    // Use XPath to locate the "Filmer" link and click it
-    cy.get('body div header nav ul li:eq(0) a').click();
-    cy.wait(10000);
-  });
+  cy.log('Attempting to click on På bio nu');
+  cy.contains('På bio nu').click();
 });
 
+
 When('I apply the filter', () => {
-  // TODO: implement step
+
+
+
 });
+
+
+
 
 Then('I should be able to see all movies that are currently in cinemas', () => {
   // TODO: implement step
