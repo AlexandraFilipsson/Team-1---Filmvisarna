@@ -18,100 +18,56 @@ When('I click on På bio nu', () => {
 
 
 When('I apply the filter', () => {
-
-
-
+  When('I apply the filter', () => {
+    cy.log('Attempting to apply the filter');
+  })
 });
-
-
 
 
 Then('I should be able to see all movies that are currently in cinemas', () => {
-  // TODO: implement step
+  Then('I should be able to see all movies that are currently in cinemas', () => {
+    // Wait for the movies to be loaded
+    cy.get('.cinema-movies').should('exist').should('be.visible');
+  });
+
 });
 
+
 When('I pick a specific date', () => {
-  // TODO: implement step
+  When('I pick a specific date', () => {
+    // Assuming the input field for the date has a unique identifier or class
+    cy.get('body div main ul li:nth-child(2) input').type('2024-02-14'); // Assuming '2024-02-01' is the desired date format
+  });
+
 });
 
 When('I apply the date filter', () => {
-  // TODO: implement step
+  When('I apply the date filter', () => {
+    cy.get('.sectionClass').should('exist');
+  })
 });
 
+
 Then('I should be able to see all movies scheduled for that date', () => {
-  // TODO: implement step
+  Then('I should be able to see all movies scheduled for that date', () => {
+    cy.get('body > div > main > section').should('be.visible');
+  });
 });
 
 When('I select an age limit option', () => {
-  // TODO: implement step
-});
-
-When('I apply the age limit filter', () => {
-  // TODO: implement step
-});
-
-Then('I should be able to see all movies that meet the selected age limit', () => {
-  // TODO: implement step
-});
-
-
-/*
-
-import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-
-Given('that I am on the startpage', () => {
-  cy.visit('./');
-});
-
-Given('I have clicked on Filmer', () => {
-  it('Clicks on the "Filmer" link', () => {
-    // Visit the page containing the element
-    // Use XPath to locate the "Filmer" link and click it
-    cy.get('body div header nav ul li:eq(0) a').click();
-    cy.wait(10000);
-    // Continue with the rest of your test logic or assertions
-    // ...
+  When('I select an age limit option', () => {
+    cy.get('body > div > main > ul > li:eq(2) > select').select('YourAgeLimitOption');
   });
 });
 
-Given('I click on På bio nu', () => {
-  it('Clicks on the "Filmer" link', () => {
-    cy.get('div > main > ul > li:first-child > select > option:first-child').should('be.visible').click();
-
-
+When('I apply the age limit filter', () => {
+  When('I apply the age limit filter', () => {
+    cy.get('body > div > main > section').should('exist');
   });
 });
 
-
-When('I apply the filter', () => {
-  // TODO: implement step
-});
-
-Then('I should be able to see all movies that are currently in cinemas', () => {
-  // TODO: implement step
-});
-
-Given('I pick a specific date', () => {
-  // TODO: implement step
-});
-
-When('I apply the date filter', () => {
-  // TODO: implement step
-});
-
-Then('I should be able to see all movies scheduled for that date', () => {
-  // TODO: implement step
-});
-
-Given('I select an age limit option', () => {
-  // TODO: implement step
-});
-
-When('I apply the age limit filter', () => {
-  // TODO: implement step
-});
-
 Then('I should be able to see all movies that meet the selected age limit', () => {
-  // TODO: implement step
+  Then('I should be able to see all movies that meet the selected age limit', () => {
+    cy.get('body > div > main > section').should('exist');
+  });
 });
-*/
