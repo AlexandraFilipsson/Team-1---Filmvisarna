@@ -4,11 +4,13 @@ Given('that I am on the start page', () => {
   cy.visit('/');
 });
 
-When('I click on a movie', () => {
+When('I click on the last movie', () => {
   cy.get('.carousel-card').last().click();
 });
 
 Then('movie details page is presented', () => {
+  cy.get('.moviedetail-wrapper')
+  .should('be.visible')
 });
 
 /* No duplicate steps, this one already above
@@ -91,4 +93,6 @@ When('I press the {string} button', (a) => {
 });
 
 Then('more viewings to book should be presented on the page', () => {
+ cy.get('.screening-details')
+    .should('have.length', 6)
 });
