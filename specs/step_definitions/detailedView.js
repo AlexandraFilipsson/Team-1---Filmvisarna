@@ -50,7 +50,7 @@ Given('I click on a movie', () => {});*/
 Given('movie details page is presented', () => {});*/
 
 When('I click on {string} button', (a) => {
-  cy.get(".screening-book-btn").click();
+  cy.get('.screening-book-btn').wait(1000).click();
 });
 
 Then('I should be taken to page ”Bokning”', () => {
@@ -87,7 +87,7 @@ When('movie details page is presented', () => {
 });*/
 
 When('I press the {string} button', (a) => {
-  cy.get(".more-screenings-btn").click();
+  cy.get('.more-screenings-btn').wait(1000).click();
 });
 
 Then('more viewings to book should be presented on the page', () => {
