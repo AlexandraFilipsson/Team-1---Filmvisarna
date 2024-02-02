@@ -11,8 +11,8 @@ When('I fill the email feald whit wrong@error.example', () => {
 When('I fill the password feald whit Ananas123456789', () => {
   cy.get("div.form-wrapper div:nth-child(2) input").type("Ananas123456789");
 });
-When('I click on the confirm-button', () => {
-  cy.get("div.Login-btn").click();
+When('I click on the Login-button', () => {
+  cy.get(".Login-btn").click();
 });
 
 Then('I should get an error massage', () => {
@@ -31,7 +31,7 @@ When('I fill the password feald whit errorERR0RerrorERR0R', () => {
 });
 
 /* No duplicate steps, this one already above
-When('I click on the confirm-button', () => {});*/
+When('I click on the Login-button', () => {});*/
 
 /* No duplicate steps, this one already above
 Then('I should get an error massage', () => {});*/
@@ -47,7 +47,7 @@ When('I fill the password feald whit nothing in it', () => {
 });
 
 /* No duplicate steps, this one already above
-When('I click on the confirm-button', () => {});*/
+When('I click on the Login-button', () => {});*/
 
 /* No duplicate steps, this one already above
 Then('I should get an error massage', () => {});*/
@@ -62,7 +62,7 @@ When('I fill the email feald whit Sakuya.yae@Darkness.ananas', () => {});*/
 When('I fill the password feald whit Ananas123456789', () => {});*/
 
 /* No duplicate steps, this one already above
-When('I click on the confirm-button', () => {});*/
+When('I click on the Login-button', () => {});*/
 
 Then('I should be loged in', () => {
   // TODO: implement step
@@ -72,6 +72,6 @@ Then('be taken to the register page', () => {
   // TODO: implement step
 });
 
-Then('be able to see the {string} button', (a) => {
+Then('be able to see the {string} button', (myPageBtn) => {
   // TODO: implement step
 });
