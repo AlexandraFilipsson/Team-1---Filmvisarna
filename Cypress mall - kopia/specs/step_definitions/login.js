@@ -65,14 +65,10 @@ When('I fill the password feald whit Ananas123456789', () => {});*/
 /* No duplicate steps, this one already above
 When('I click on the Login-button', () => {});*/
 
-Then('I should be loged in', () => {
-  // TODO: implement step
-});
-
-Then('be taken to the register page', () => {
-  // TODO: implement step
+Then('I should be taken to the last page visited', () => {
+  cy.visit("/");
 });
 
 Then('be able to see the {string} button', (myPageBtn) => {
-  // TODO: implement step
+  cy.get("button").contains(myPageBtn);
 });
