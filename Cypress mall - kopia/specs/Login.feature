@@ -21,7 +21,7 @@ Feature: log in to the website
     When I fill the email feald whit Sakuya.yae@Darkness.ananas
     And I fill the password feald whit nothing in it
     And I click on the Login-button
-    Then I should get an error massage
+    Then I should get a required feald error
 
   Scenario: Login whit a correct credentials
     Given that I am on the log in page
