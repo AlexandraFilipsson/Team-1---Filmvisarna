@@ -7,12 +7,15 @@ Given('I am on the startpage', () => {
 Given('I have clicked on a movie', () => {
   cy.get('.carousel-card')
     .first()
+    .wait(1000)
     .click()
 });
 
 //__________1__________
 Given('I have chosen the date 2024-02-22', () => {
-  cy.get('.date-input').type('2024-02-22')
+  cy.get('.date-input')
+    .type('2024-02-22')
+    .wait(1000)
 });
 
 Given('I have pressed Boka', () => { 
@@ -27,7 +30,8 @@ Given('theatre-container is visible', () => {
 });
 
 Given('all seats are taken', () => {
-  cy.get('.seat:not(.taken-seat)').should('have.length', 0)
+  cy.get('.seat:not(.taken-seat)')
+    .should('have.length', 0)
 });
 
 Then('I should not be able to continue', () => {
@@ -38,7 +42,9 @@ Then('I should not be able to continue', () => {
 
 //__________2__________
 Given('I have chosen the date 2024-02-17', () => {
-  cy.get('.date-input').type('2024-02-17')
+  cy.get('.date-input')
+    .type('2024-02-17')
+    .wait(1000)
 });
 
 When('I add 6 tickets', () => {
@@ -52,7 +58,8 @@ When('I add 6 tickets', () => {
 });
 
 When('there are only 5 seats available', () => {
-  cy.get('.seat:not(.taken-seat)').should('have.length', 5)
+  cy.get('.seat:not(.taken-seat)')
+    .should('have.length', 5)
 });
 
 //__________3__________
@@ -104,7 +111,9 @@ Then('I should not be able to press seats that are taken.', () => {
 //__________5__________
 
 Given('I have chosen the date 2024-02-18', () => {
-  cy.get('.date-input').type('2024-02-18')
+  cy.get('.date-input')
+    .type('2024-02-18')
+    .wait(1000)
 });
 
 When('I press individuella platser', () => {
