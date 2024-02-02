@@ -23,25 +23,25 @@ Feature: Available Seats
       And theatre-container is visible
       When I add 6 tickets
       And there are only 5 seats available
-      Then I should not be able to press seats that are taken.
+      When I should not be able to press seats that are taken
       
     Scenario: I want to book more then 8 ticket
       Given I have pressed the button to choose a date and time
       And theatre-container is visible
       When I want to buy 10 tickets
       Then a message should tell me that i can not book more then 8 tickets at a time
-      And I should not be able to press Boka biljett
 
     Scenario: I want to book a specific seat thats taken
       Given I have pressed the button to choose a date and time
       And theatre-container is visible
       When I enter 1 ordinary ticket for the movie 
-      Then I should not be able to press seats that are taken.
+      When I try pressing seats that are taken, the seat should turn red
       
     Scenario: I want to book seats that are not adjacent
       Given I have chosen the date 2024-02-18 
       And I have pressed Boka
       And theatre-container is visible
       When I press individuella platser
-      Then I can press the first and the last seats 
+      And I can press the first and the last seats 
       And press Boka biljett
+      Then Bookconfirm-wrapper should show

@@ -61,6 +61,12 @@ When('there are only 5 seats available', () => {
   cy.get('.seat:not(.taken-seat)')
     .should('have.length', 5)
 });
+When('I should not be able to press seats that are taken', () => { 
+      cy.get('.taken-seat')
+    .first()
+    .trigger('mouseover')
+    .should('have.class', 'seat-hover-fail')
+})
 
 //__________3__________
 
@@ -100,13 +106,12 @@ When('I enter 1 ordinary ticket for the movie', () => {
     .last()
     .click()
 });
-
-Then('I should not be able to press seats that are taken.', () => {
-  cy.get('.taken-seat')
+When('I try pressing seats that are taken, the seat should turn red', () => { 
+    cy.get('.taken-seat')
     .first()
     .trigger('mouseover')
     .should('have.class', 'seat-hover-fail')
-});
+})
 
 //__________5__________
 
@@ -121,7 +126,7 @@ When('I press individuella platser', () => {
   .click()
 })
 
-Then('I can press the first and the last seats', () => { 
+When('I can press the first and the last seats', () => { 
   cy.get('.seat')
     .first()
     .click()
@@ -130,8 +135,12 @@ Then('I can press the first and the last seats', () => {
     .click()
 })
 
-Then('press Boka biljett', () => {
+When('press Boka biljett', () => {
   cy.get('.section-2')
     .find('button')
     .click()
- })
+})
+Then('Bookconfirm-wrapper should show', () => { 
+  cy.get('.bookconfirm-wrapper')
+    .should('be.visible')
+})
