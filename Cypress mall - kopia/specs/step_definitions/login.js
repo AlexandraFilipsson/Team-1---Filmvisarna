@@ -12,7 +12,7 @@ When('I fill the password feald whit Ananas123456789', () => {
   cy.get("div.form-wrapper div:nth-child(2) input").type("Ananas123456789");
 });
 When('I click on the Login-button', () => {
-  cy.get(".Login-btn").click();
+  cy.get(".Login-btn").click({ force: true });
 });
 
 Then('I should get an error massage', () => {
@@ -43,14 +43,15 @@ Given('that I am on the log in page', () => {});*/
 When('I fill the email feald whit Sakuya.yae@Darkness.ananas', () => {});*/
 
 When('I fill the password feald whit nothing in it', () => {
-  cy.get("div.form-wrapper div:nth-child(2) input")
+  cy.get("div.form-wrapper div:nth-child(2) input");
 });
 
 /* No duplicate steps, this one already above
 When('I click on the Login-button', () => {});*/
 
-/* No duplicate steps, this one already above
-Then('I should get an error massage', () => {});*/
+Then('I should get a required feald error', () => {
+  cy.get("div.form-wrapper div:nth-child(2) input").should("be.empty");
+});
 
 /* No duplicate steps, this one already above
 Given('that I am on the log in page', () => {});*/
