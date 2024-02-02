@@ -8,7 +8,7 @@ Feature: Available Seats
 
     Background:
       Given I am on the startpage
-      And I have clicked on a movie
+      And I have clicked on the first movie
        
     Scenario: all seats are taken
       Given I have chosen the date 2024-02-22

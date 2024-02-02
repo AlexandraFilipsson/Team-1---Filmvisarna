@@ -4,7 +4,7 @@ Given('I am on the startpage', () => {
   cy.visit('/')
 });
 
-Given('I have clicked on a movie', () => {
+Given('I have clicked on the first movie', () => {
   cy.get('.carousel-card')
     .first()
     .wait(1000)
