@@ -28,6 +28,5 @@ Feature: log in to the website
     When I fill the email feald whit Sakuya.yae@Darkness.ananas
     And I fill the password feald whit Ananas123456789
     And I click on the Login-button
-    Then I should be loged in
-    And be taken to the register page
+    Then I should be taken to the last page visited
     And be able to see the "Min sida" button
