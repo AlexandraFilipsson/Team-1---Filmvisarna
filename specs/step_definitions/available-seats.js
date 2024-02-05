@@ -1,8 +1,8 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given('I am on the startpage', () => {
+/*Given('I am on the startpage', () => {
   cy.visit('/')
-});
+});*/
 
 Given('I have clicked on the first movie', () => {
   cy.get('.carousel-card')
@@ -34,7 +34,7 @@ Given('all seats are taken', () => {
     .should('have.length', 0)
 });
 
-Then('I should not be able to continue', () => {
+Then('The Boka biljett button should be disabled', () => {
    cy.get('.section-2')
     .find('button')
     .should('be.disabled')
@@ -62,12 +62,16 @@ When('there are only 5 seats available', () => {
     .should('have.length', 5)
 });
 When('I should not be able to press seats that are taken', () => { 
-      cy.get('.taken-seat')
+  cy.get('.taken-seat')
+    .first()
     .first()
     .trigger('mouseover')
+})
+Then('the taken seats should turn red', () => {
+  cy.get('.taken-seat')
     .should('have.class', 'seat-hover-fail')
 })
-
+ 
 //__________3__________
 
 Given('I have pressed the button to choose a date and time', () => {
@@ -91,12 +95,6 @@ Then('a message should tell me that i can not book more then 8 tickets at a time
     .should('be.visible')
 });
 
-Then('I should not be able to press Boka biljett', () => {
-  cy.get('.section-2')
-    .find('button')
-    .should('be.disabled')
-});
-
 //__________4__________
 
 When('I enter 1 ordinary ticket for the movie', () => {
@@ -106,11 +104,16 @@ When('I enter 1 ordinary ticket for the movie', () => {
     .last()
     .click()
 });
-When('I try pressing seats that are taken, the seat should turn red', () => { 
+When('I try pressing seats that are taken', () => { 
     cy.get('.taken-seat')
     .first()
     .trigger('mouseover')
-    .should('have.class', 'seat-hover-fail')
+    .click()
+})
+Then('the seat should turn red', () => {
+  cy.get('.taken-seat')
+    .first()
+    .should('have.class', 'seat-hover-fail')  
 })
 
 //__________5__________
