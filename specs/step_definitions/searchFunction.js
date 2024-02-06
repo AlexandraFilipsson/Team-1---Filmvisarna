@@ -19,3 +19,11 @@ When('press Enter', () => {
 Then('I want to see results based on searchinput', () => {  
   cy.get('article.search-result-card').contains('komedi').should('be.visible');
 });
+
+When('I type something in the searchfield that gives negative result', () => {
+  cy.get('input.search-input.search-input-mobile').type('1337');
+});
+
+Then('I want to see an infotext', () => {
+  cy.get('article.search-result-container p').contains('Vi hittade inget som matchade din sökning!').should('be.visible');
+});
