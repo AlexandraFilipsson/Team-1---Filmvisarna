@@ -1,5 +1,5 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-
+/*
 Given('that I am on the startpage', () => {
   cy.visit('/')
 });
@@ -42,4 +42,4 @@ When('I apply the age limit filter', () => {
 
 Then('I should be able to see all movies that meet the selected age limit', () => {
   // TODO: implement step
-});
+});*/

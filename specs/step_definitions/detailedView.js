@@ -10,7 +10,7 @@ When('I click on the last movie', () => {
 
 Then('movie details page is presented', () => {
   cy.get('.moviedetail-wrapper')
-  .should('be.visible')
+    .should('be.visible')
 });
 
 /* No duplicate steps, this one already above
@@ -38,7 +38,7 @@ Given('I click on a movie', () => {});*/
 Given('movie details page is presented', () => {});*/
 
 Then('moviedetail-director field should be found', () => {
-  cy.get('.moviedetail-director') 
+  cy.get('.moviedetail-director')
     .should('be.visible');
 });
 
@@ -52,7 +52,7 @@ Given('I click on a movie', () => {});*/
 Given('movie details page is presented', () => {});*/
 
 When('I click on {string} button', (a) => {
-  cy.get('.screening-book-btn').wait(1000).click();
+  cy.get('.screening-book-btn').first().wait(1000).click();
 });
 
 Then('I should be taken to page ”Bokning”', () => {
@@ -80,8 +80,8 @@ Then("I can see the text 'Tyvärr finns det ingen visning för det valda datumet
 /* No duplicate steps, this one already above
 Given('that I am on the start page', () => {});*/
 
-When('I click on the first movie', () => { 
-cy.get('.carousel-card').first().click();
+When('I click on the first movie', () => {
+  cy.get('.carousel-card').first().click();
 });
 
 /* No duplicate steps, this one already above
@@ -89,10 +89,10 @@ When('movie details page is presented', () => {
 });*/
 
 When('I press the {string} button', (a) => {
-  cy.get('.more-screenings-btn').wait(1000).click();
+  cy.get('.more-screenings-btn').first().wait(1000).click();
 });
 
 Then('more viewings to book should be presented on the page', () => {
- cy.get('.screening-details')
+  cy.get('.screening-details')
     .should('have.length', 6)
 });
