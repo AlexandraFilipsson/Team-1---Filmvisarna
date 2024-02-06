@@ -1,7 +1,7 @@
 ### Rapport Filmvisarna Team 1
 
 Deltagare: Alexandra, Annelie, Charlotte, Kira, Kim och Samuel.
-https://filmvisarna-team1.nodehill.se/
+Filmvisarna som vi testat - https://filmvisarna-team1.nodehill.se/
 
 SCRUM - master: Alexandra satte upp vårt gemensamma GitHub-repo. Var och en av deltagarna skapade sedan varsin egen gren och utvecklade den Feature funktionalitet som man arbetade med.
 
