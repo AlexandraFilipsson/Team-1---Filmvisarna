@@ -39,7 +39,7 @@ Testar så att det inte går att boka mer än 8platser och att det inte går att
 ### Vad visar testerna på - finns det buggar/fel i produkten? 
 
 De scenarion vi valt att testa av går igenom utan fel. Vi valde bort att testa de funktioner där vi såg buggar/fel i produkten.
-Däremot i den utforskande testdelen antecknade vi alla buggar och förbättringar som vi hittade på https://filmvisarna-team1.nodehill.se/
+Däremot i den utforskande testdelen antecknade vi alla buggar och förbättringar som vi hittade på filmsidan.
 
 Länk till dessa anteckningar i Trello finns här: 
 https://trello.com/b/IMhiGAaA/exploratory-testing
