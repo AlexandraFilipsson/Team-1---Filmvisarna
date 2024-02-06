@@ -22,23 +22,15 @@ When('I apply the filter', () => {
 
 Then('I should be able to see all movies that are currently in cinemas', () => {
   cy.get('.movie-card').then($movies => {
-    const numberOfMovies = $movies.length;
-
-    // Check if there are more than three movies
-    if (numberOfMovies > 3) {
-      // If more than three movies, check if "på bio nu" page
-      cy.contains('På bio nu').should('exist');
-    } else {
-      // If three or fewer movies, check if "kommande" page
-      cy.contains('Kommande').should('exist');
-    }
+    cy.get('.movie-card').should('have.length.gt', 3);
+    cy.contains('På bio nu').should('exist');
   });
 });
 
 
 
 When('I pick a specific date', () => {
-  // Assuming the input field for the date has a unique identifier or class
+
   cy.get('body div main ul li:nth-child(2) input').type('2024-02-14'); // 
 });
 
