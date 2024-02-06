@@ -48,5 +48,5 @@ https://trello.com/b/IMhiGAaA/exploratory-testing
 ### Saker vi inte hunnit testa
 
 Vi prioriterade bort att testa meny länkarna Hitta hit, Kontakt och Om oss. Alla dessa tre gick till samma gemensamma sida.
-Sociala medier länkarna testades inte heller av, då dessa inte var länkade utan endast verkar finns med för syns skull.
+Sociala medier länkarna testades inte heller av, då dessa inte var länkade utan endast verkar finnas med för syns skull.
 
