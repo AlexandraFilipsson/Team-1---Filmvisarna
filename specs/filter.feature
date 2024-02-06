@@ -12,11 +12,12 @@ Feature: Filter
 
   Scenario: Filter movies by specific date
     When I pick a specific date
-    # And I apply the date filter
     Then I should be able to see all movies scheduled for that date
 
   Scenario: Filter movies by age limit
     When I select an age limit option
-    #And I apply the age limit filter
-    Then I should be able to see all movies that meet the selected age limit
+    Then I should be able to see all movies that meet the selected age limit of "Barntillåtet"
+    And I should be able to see all movies that meet the selected age limit of 7
+    And I should be able to see all movies that meet the selected age limit of 11
+    Then I should be able to see all movies that meet the selected age limit of 15
 

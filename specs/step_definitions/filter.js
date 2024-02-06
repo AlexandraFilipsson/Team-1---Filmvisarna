@@ -6,6 +6,7 @@ Given('that I am on the startpage', () => {
 });
 
 Given('I have clicked on Filmer', () => {
+  cy.wait(1000);
   cy.get('header nav a[href="/filmer"]').click();
 });
 
@@ -47,24 +48,51 @@ Then('I should be able to see all movies scheduled for that date', () => {
 
 
 When('I select an age limit option', () => {
-  cy.wait(1000)
-  cy.get('select[name="age"].filter-select').select('11');
+  cy.get('select[name="age"].filter-select').select('0');
   cy.wait(1000);
-  //cy.get('div main ul li:nth-child(3) select').should('be.visible').select('11', { force: true });
+
 
 });
 
-//When('I apply the age limit filter', () => {
-//cy.get('body > div > main > ul > li:eq(2) > select').select('YourAgeLimitOption');
-//});
+Then('I should be able to see all movies that meet the selected age limit of "Barntillåtet"', () => {
+  cy.get('.movie-card').each(($card) => {
+    cy.wrap($card).find('span.card-agelimit').should('have.text', 'Barn');
+  }).then(() => {
+    cy.log('All movie cards have the age limit of Barntillåtet.');
+  });
 
-Then('I should be able to see all movies that meet the selected age limit', () => {
+});
+
+Then('I should be able to see all movies that meet the selected age limit of 7', () => {
+  cy.get('select[name="age"].filter-select').select('7');
+  cy.wait(1000);
+  cy.get('.movie-card').each(($card) => {
+    cy.wrap($card).find('span.card-agelimit').should('have.text', '7 +');
+  }).then(() => {
+    cy.log('All movie cards have the age limit of 7');
+  });
+
+});
+
+Then('I should be able to see all movies that meet the selected age limit of 11', () => {
+  cy.get('select[name="age"].filter-select').select('11');
+  cy.wait(1000);
   cy.get('.movie-card').each(($card) => {
     cy.wrap($card).find('span.card-agelimit').should('have.text', '11 +');
   }).then(() => {
     cy.log('All movie cards have the age limit of 11.');
   });
-  //cy.get('.movie-card').should('have.length', 4).then(() => {
-  //cy.log('There are 4 movie cards.');
-  //});
+
+});
+
+
+Then('I should be able to see all movies that meet the selected age limit of 15', () => {
+  cy.get('select[name="age"].filter-select').select('15');
+  cy.wait(1000);
+  cy.get('.movie-card').each(($card) => {
+    cy.wrap($card).find('span.card-agelimit').should('have.text', '15 +');
+  }).then(() => {
+    cy.log('All movie cards have the age limit of 15.');
+  });
+
 });
