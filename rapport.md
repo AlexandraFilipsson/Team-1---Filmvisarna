@@ -31,7 +31,7 @@ Testar så att det inte går att boka mer än 8platser och att det inte går att
 
 •	Login - 
 
-•	Filter – 
+•	Filter – Göra filtrering mellan vad som går på bio just nu, kommande filmer, välja specifikt datum samt välja åldersgräns.
 
 •	Search – Testar att det kommer fram något relevant sökresultat baserat på sökinput. Vid medveten ”misslyckad” sökning ska det komma fram en infotext som visar på att sökningen inte matchar något.
 
