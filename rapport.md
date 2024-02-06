@@ -21,7 +21,7 @@ Testar så att det inte går att boka mer än 8platser och att det inte går att
 
 •	Detailed View – testar av så att detaljsidan och dess innehåll visas som tänkt. Testar att trailern är synbar, att Boka knapp funkar och att fler visningsdatum kan hämtas.
 
-•	Ticket Confirmation - 
+•	Ticket Confirmation - det var checkat scenario när användare innan att bekräfta boking loggar in som medlem och scenario när änvändare bekräftar booking utan att logga in.
 
 •	Show Price – biljettfunktion och uträkning. Kontrollerar att de olika biljetttyperna går att välja och att det blir rätt summa.
 
