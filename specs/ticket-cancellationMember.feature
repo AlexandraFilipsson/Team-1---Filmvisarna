@@ -2,7 +2,9 @@ Feature: Cancel booking as a member
   As a user, I want to be able to cancel a booking
 
   Background:
-    Given that I am on the booked movie page
+    Given that I am on the start page
+    And I logg in as a member
+    And that I have a movie ticket booked
 
   Scenario: Member Cancelling Booking
     When I select the booking I wish to cancel
