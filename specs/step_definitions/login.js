@@ -66,9 +66,9 @@ When('I fill the password feald whit Ananas123456789', () => {});*/
 When('I click on the Login-button', () => {});*/
 
 Then('I should be taken to the last page visited', () => {
-  cy.visit("/");
+  //cy.visit("/");
 });
 
 Then('be able to see the {string} button', (myPageBtn) => {
-  cy.get("button").contains(myPageBtn);
+  cy.get("button").contains(myPageBtn, { timeout: 10000 });
 });
