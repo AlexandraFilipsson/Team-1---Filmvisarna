@@ -34,19 +34,24 @@ When('I confirm my seat selection', () => {
 });
 
 When('I confirm the booking', () => {
-  // TODO: implement step
+  cy.get('.section-2')
+    .find('button').click();
+
 });
 
 Then('I receive a confirmation', () => {
-  // TODO: implement step
+  //cy.wait(2000)
+  cy.get('.confirm-button').contains('Bekräfta');
+
 });
 
+
 When('I click on Min sida', () => {
-  // TODO: implement step
+  cy.get('.myaccount-btn').contains('Min sida');
 });
 
 Then('I should see all the booked movies', () => {
-  // TODO: implement step
+
 });
 
 Then('I select Avboka', () => {
