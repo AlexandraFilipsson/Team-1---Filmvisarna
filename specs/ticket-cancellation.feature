@@ -1,18 +1,19 @@
-/*Feature: Cancel booking
-As a user, I want to be able to cancel a booking
+Feature: Ticket Cancellation both as member and non-member
+  As a user I want cancel a booked ticket as a member
 
-//Background:
-// Given that I am on the booked movie page
+  Background:
+    Given that I am on the start page
 
-//Scenario: Non-member Cancelling Booking
-/Given I am not currently logged into any account
-/And I have the booking reference or confirmation email available
-/When I access the cancellation link provided in the confirmation email or on the website
-/Then I should be prompted to input the booking details for verification
-//And after entering the required information
-//When the system successfully verifies the booking
-//And I proceed by clicking on the "Cancel" button
-//Then I should encounter a confirmation dialogue
-//And upon confirming the cancellation request
-//Then I should expect to receive a cancellation email
-//
+  Scenario: Member Cancelling Ticket
+    When I logg in as a member
+    And I navigate to a movie booking
+    And I confirm my seat selection
+    And I confirm the booking
+    Then I receive a confirmation
+
+    When I click on Min sida
+    Then I should see all the booked movies
+    And I select Avboka
+    And I confirm the cancellation
+    Then the reservation disapears from the site
+
