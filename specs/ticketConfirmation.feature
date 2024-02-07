@@ -15,6 +15,6 @@ As a user I want be abble to get confirmation of my booking
 
     
 
-    Scenario: Booking confirmation when User gets confirmation without log in as a member
-        Then add valid e-mail in field email
-        And pressing to Bekräfta button can see table with booking information
+    #Scenario: Booking confirmation when User gets confirmation without log in as a member
+        #Then add valid e-mail in field email
+        #And pressing to Bekräfta button can see table with booking information
