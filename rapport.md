@@ -17,7 +17,7 @@ Filtrering, avbokning, bokningsbekräftelse, detaljerade vyn, tillgängliga sät
 •	Available seats – testar så att det inte går att boka platser i en redan fullsatt salong.
 Testar så att det inte går att boka mer än 8platser och att det inte går att boka en redan upptagen plats. Samt att det går att boka platser som inte är intilliggande.
 
-•	Ticket Booking - Det var checkat generell funktionalitet, göra hela vägen att boka biljett till biljettbekräftelse och som negativ scenarion när användaren glömde att välja plats. De features var uppdelade till andra små features.
+•	Ticket Booking - Det var checkat generell funktionalitet, göra hela vägen att boka biljett till biljettbekräftelse och som negativ scenarion när användaren glömde att välja plats. Den feature var uppdelade till andra små features.
 
 •	Detailed View – testar av så att detaljsidan och dess innehåll visas som tänkt. Testar att trailern är synbar, att Boka knapp funkar och att fler visningsdatum kan hämtas.
 
