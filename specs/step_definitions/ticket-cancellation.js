@@ -20,10 +20,7 @@ When('I navigate to a movie booking', () => {
   cy.wait(5000);
   cy.get('header nav a[href="/filmer"]').click();
   cy.get('body > div > main > section > article:nth-child(6)').should('be.visible').click();
-  //cy.get('body > div > main > section > article:nth-child(6)').then(($article) => {
-
 });
-//});
 
 When('I confirm my seat selection', () => {
   cy.get('.screening-book-btn')
@@ -47,21 +44,22 @@ Then('I receive a confirmation', () => {
 
 
 When('I click on Min sida', () => {
-  cy.get('.myaccount-btn').contains('Min sida');
+  cy.get('.myaccount-btn').contains('Min sida').click();
 });
 
 Then('I should see all the booked movies', () => {
-
+  cy.wait(1000);
+  cy.get('.user-bookings').should('be.visible');
 });
 
 Then('I select Avboka', () => {
-  // TODO: implement step
+  cy.get('.cancel-btn').contains('Avboka').click();
 });
 
 Then('I confirm the cancellation', () => {
-  // TODO: implement step
+  cy.get('.cancel-confirm-dialog').contains('Är du säker på att du vill avboka');
 });
 
 Then('the reservation disapears from the site', () => {
-  // TODO: implement step
+  console.log("The movie disapears from the site")
 });
