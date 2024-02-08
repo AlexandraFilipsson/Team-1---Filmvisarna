@@ -1,4 +1,4 @@
-Feature: Ticket Cancellation as member and as a non member
+Feature: Ticket Cancellation as a member and as a non member
   As a user I want cancel a booked ticket as a member and also cancel a booked ticket as a non member
 
   Background:
