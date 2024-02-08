@@ -25,7 +25,7 @@ Testar så att det inte går att boka mer än 8platser och att det inte går att
 
 •	Show Price – biljettfunktion och uträkning. Kontrollerar att de olika biljetttyperna går att välja och att det blir rätt summa.
 
-•	Cancel Booking -
+•	Cancel Booking - både som medlem och som icke-medlem. Som medlem ligger bokningen på 'Min sida' och på samma sida finns en avboka-knapp. Som icke-medlem får användaren ett mail där det finns en avboka-knapp (den knappen fungerar ej - "webbplatsen kan inte nås").
 
 •	Register - testar scenarion för tomt fält, för svagt lösenord och vid positivt utfall testar så att rätt uppgifter matas in i fälten för att skapa ett lyckat lösenord.
 
