@@ -2,10 +2,10 @@ import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
 Given('that I am on the startpage', () => {
   cy.visit('/');
-  cy.viewport(1200, 900)
 });
 
 Given('I have clicked on Filmer', () => {
+  cy.viewport(1200, 900)
   cy.wait(1000);
   cy.get('header nav a[href="/filmer"]').click();
 });

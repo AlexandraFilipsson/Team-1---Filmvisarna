@@ -1,11 +1,12 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-Given('that I am on the start page', () => {
+/*Given('that I am on the start page', () => {
   cy.visit('/');
-  cy.viewport(1200, 900);
-});
+  
+});*/
 
 When('I logg in as a member', () => {
+  cy.viewport(1200, 900);
   cy.wait(5000);
 
   cy.get('.myaccount-btn').click()
@@ -17,6 +18,7 @@ When('I logg in as a member', () => {
 });
 
 When('I navigate to a movie booking', () => {
+  cy.viewport(1200, 900);
   cy.wait(5000);
   cy.get('header nav a[href="/filmer"]').click();
   cy.get('body > div > main > section > article:nth-child(6)').should('be.visible').click();
