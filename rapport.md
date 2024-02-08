@@ -27,9 +27,9 @@ Testar så att det inte går att boka mer än 8platser och att det inte går att
 
 •	Cancel Booking -
 
-•	Register - 
+•	Register - testerna täcker upp scenarion för tomt fält, för svagt lösenord och positivt utfall så att rätt uppgifter matas in i fälten för att skapa ett lyckat lösenord.
 
-•	Login - 
+•	Login - testar av fel lösen, tomt lösenord, tom email och även korrekta inloggningsuppgifter för konto som finns.
 
 •	Filter – Göra filtrering mellan vad som går på bio just nu, kommande filmer, välja specifikt datum samt välja åldersgräns.
 
