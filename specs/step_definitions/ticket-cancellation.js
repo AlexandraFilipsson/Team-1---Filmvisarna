@@ -37,7 +37,6 @@ When('I confirm the booking', () => {
 });
 
 Then('I receive a confirmation', () => {
-  //cy.wait(2000)
   cy.get('.confirm-button').contains('Bekräfta');
 
 });
@@ -62,4 +61,8 @@ Then('I confirm the cancellation', () => {
 
 Then('the reservation disapears from the site', () => {
   console.log("The movie disapears from the site")
+});
+
+Then('I get an email confirmation I can click on a link and cancel the booking', () => {
+  console.log('An email is send to the given email address with the ticket confirmation. There is also a button to cancel the reservation')
 });

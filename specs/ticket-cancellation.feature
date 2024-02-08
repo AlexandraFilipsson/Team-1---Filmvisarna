@@ -1,5 +1,5 @@
-Feature: Ticket Cancellation both as member and non-member
-  As a user I want cancel a booked ticket as a member
+Feature: Ticket Cancellation as member and as a non member
+  As a user I want cancel a booked ticket as a member and also cancel a booked ticket as a non member
 
   Background:
     Given that I am on the start page
@@ -16,4 +16,13 @@ Feature: Ticket Cancellation both as member and non-member
     And I select Avboka
     And I confirm the cancellation
     Then the reservation disapears from the site
+
+  Scenario: Non member Cancelling Ticket
+    When I navigate to a movie booking
+    And I confirm my seat selection
+    And I confirm the booking
+    Then I receive a confirmation
+    And I get an email confirmation I can click on a link and cancel the booking
+
+
 
