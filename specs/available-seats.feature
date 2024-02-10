@@ -12,6 +12,7 @@ Feature: Available Seats
                            
     Scenario: all seats are taken
       Given I have chosen the date 2024-02-22
+      And the site should show 1 screening
       And I have pressed Boka
       And theatre-container is visible
       And all seats are taken
@@ -19,6 +20,7 @@ Feature: Available Seats
 
     Scenario: If there is not enough seats for the group I want to book tickets for.
       Given I have chosen the date 2024-02-17
+      And the site should show 1 screening
       And I have pressed Boka
       And theatre-container is visible
       When I add 6 tickets
@@ -43,6 +45,7 @@ Feature: Available Seats
 
     Scenario: I want to book seats that are not adjacent
       Given I have chosen the date 2024-02-18 
+      And the site should show 1 screening
       And I have pressed Boka
       And theatre-container is visible
       When I press individuella platser

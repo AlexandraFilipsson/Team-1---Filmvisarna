@@ -1,13 +1,13 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 
-/*Given('I am on the startpage', () => {
-  cy.visit('/')
-});*/
-
 Given('I have clicked on the first movie', () => {
-  cy.get('.carousel-card')
+ 
+  cy.get('.carousel-wrapper')
+    .should('have.length', 2)
+    .find('.carousel-card')
     .first()
-    .wait(1000)
+    /*Here I had a .wait(1000) but changed by adding the step after, when I had alredy 
+   sent in my individual report where I mention I use.wait()*/
     .click()
 });
 
@@ -15,8 +15,15 @@ Given('I have clicked on the first movie', () => {
 Given('I have chosen the date 2024-02-22', () => {
   cy.get('.date-input')
     .type('2024-02-22')
-    .wait(1000)
+    /*Here I had a .wait(1000) but changed adding the step after, when I had alredy 
+    sent in my individual report where I mention I use.wait()*/
 });
+
+Given('the site should show 1 screening', () => {
+  cy.get('.screenings-list')
+    .find('section .screening-details')
+    .should('have.length', 1)
+})
 
 Given('I have pressed Boka', () => { 
    cy.get('.screening-book-btn')
@@ -44,7 +51,9 @@ Then('The Boka biljett button should be disabled', () => {
 Given('I have chosen the date 2024-02-17', () => {
   cy.get('.date-input')
     .type('2024-02-17')
-    .wait(1000)
+    /*Here I had a .wait(1000) but changed by addind the step after, when I had alredy 
+    sent in my individual report where I mention I use.wait()*/
+   
 });
 
 When('I add 6 tickets', () => {
@@ -121,7 +130,8 @@ Then('the seat should turn red', () => {
 Given('I have chosen the date 2024-02-18', () => {
   cy.get('.date-input')
     .type('2024-02-18')
-    .wait(1000)
+    /*Here I had a .wait(1000) but changed by adding the step after, when I had alredy 
+    sent in my individual report where I mention I use.wait()*/
 });
 
 When('I press individuella platser', () => {
