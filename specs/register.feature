@@ -6,7 +6,7 @@ Feature: register new user
     When I fill the firstname feald whit "Sakuya"
     And I fill the lastname feald whit "Yae"
     And I fill the phonenumber feald whit "000000000"
-    And I fill the email feald whit "testing@example.example"
+    And I fill the email feald whit "testing@example.ex"
     And I fill the password feald whit "GUITesting75880"
     And I fill the confirm password feald whit "GUITesting75880"
     And I click on the confirm-button
@@ -18,7 +18,7 @@ Feature: register new user
     When I fill the firstname feald whit "Sakuya"
     And I fill the lastname feald whit "Yae"
     And I fill the phonenumber feald whit "000000000"
-    And I fill the email feald whit "testing@example.example"
+    And I fill the email feald whit "testing@example.ex"
     And I fill the password feald whit ABC12345
     And I fill the confirm password feald whit ABC12345
     And I click on the confirm-button
@@ -29,7 +29,7 @@ Feature: register new user
     When I don't fill the firstname feald
     And I fill the lastname feald whit "Yae"
     And I fill the phonenumber feald whit "000000000"
-    And I fill the email feald whit "testing@example.example"
+    And I fill the email feald whit "testing@example.ex"
     And I fill the password feald whit "GUITesting75880"
     And I fill the confirm password feald whit "GUITesting75880"
     And I click on the confirm-button
